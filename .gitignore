@@ -8,3 +8,10 @@ Task_1/.vs/Task_1/v17/.suo
 Task_2/.vs/Task_2/v17/.suo
 Task_3/.vs/Task_3/v17/.suo
 Task_4/.vs/Task_4/v17/.suo
+Task_4/Task_4/obj/Debug/net6.0-windows/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+Task_4/Task_4/obj/Debug/net6.0-windows/Task_4.AssemblyInfo.cs
+*.cache
+Task_4/Task_4/obj/Debug/net6.0-windows/Task_4.GlobalUsings.g.cs
+*.editorconfig
+*.props
+*.targets
