@@ -3,35 +3,39 @@
     public partial class Form1 : Form
     {
         double[] fuel_price = { 42.30, 48.55, 46.15 };
+        double sum_fuel;
+        double sum_cafe;
         public Form1()
         {
             InitializeComponent();
             comboBoxFuel.Items.AddRange(new string[] { "Бензин АИ92", "Бензин АИ95", "Дизель" });
-            maskedTextBox1.TextChanged += MaskedTextBox1_TextChanged;
-
+            fuelValueBox.TextChanged += MaskedTextBox1_TextChanged;
+            labelPayFuel.TextChanged += labelPayTotal_TextChanged;
+            
             
         }
-
+        private void labelPayTotal_TextChanged(object? sender, EventArgs e)
+        {
+            labelPayTotal.Text = (sum_fuel+sum_cafe).ToString();
+        }
         private void MaskedTextBox1_TextChanged(object? sender, EventArgs e)
         {
-            switch (comboBoxFuel.SelectedIndex)
+           switch (comboBoxFuel.SelectedIndex)
             {
                 case 0:
                     {
-                        double sum = Convert.ToDouble(maskedTextBox1.Text) * 42.30;
-                        label6.Text = sum.ToString();
+                        getFuelSum(fuelValueBox.Text, fuel_price[0]);
                         break;
+
                     }
                 case 1:
                     {
-                        double sum = Convert.ToDouble(maskedTextBox1.Text) * 48.55;
-                        label6.Text = sum.ToString();
+                        getFuelSum(fuelValueBox.Text, fuel_price[1]);
                         break;
                     }
                 case 2:
                     {
-                        double sum = Convert.ToDouble(maskedTextBox1.Text) * 46.15;
-                        label6.Text = sum.ToString();
+                        getFuelSum(fuelValueBox.Text, fuel_price[2]);
                         break;
                     }
             }
@@ -44,24 +48,45 @@
                 case 0:
                     {
                         textBoxFuelPrice.Text = fuel_price[0].ToString();
-                        maskedTextBox1.Clear();
+                        labelPayFuel.Text = sum_fuel.ToString();
+                        fuelValueBox.Clear();
                         break;
                     }
                 case 1:
                     {
                         textBoxFuelPrice.Text = fuel_price[1].ToString();
-                        maskedTextBox1.Clear();
+                        labelPayFuel.Text = sum_fuel.ToString();
+                        fuelValueBox.Clear();
                         break;
                     }
                 case 2:
                     {
                         textBoxFuelPrice.Text = fuel_price[2].ToString();
-                        maskedTextBox1.Clear();
+                        labelPayFuel.Text = sum_fuel.ToString();
+                        fuelValueBox.Clear();
                         break;
                     }
             }
         }
-       
-        
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(1000);
+            MessageBox.Show(string.Format("{0:F} оплачено успешно!", this.sum_cafe + this.sum_fuel));
+
+        }    
+        private void getFuelSum(string text, double price)
+        {
+            if (text != "  ,")
+            {
+                sum_fuel = Convert.ToDouble(text) * price;
+
+            }
+            else
+            {
+                sum_fuel = 0;
+            }
+            labelPayFuel.Text = sum_fuel.ToString();
+        }
     }
 }
