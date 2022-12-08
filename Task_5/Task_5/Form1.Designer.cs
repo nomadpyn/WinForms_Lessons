@@ -284,6 +284,8 @@
             this.valueBurger.Name = "valueBurger";
             this.valueBurger.Size = new System.Drawing.Size(69, 23);
             this.valueBurger.TabIndex = 4;
+            this.valueBurger.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valueBurger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valueBurger_KeyPress);
             // 
             // valueHotdog
             // 
@@ -293,6 +295,8 @@
             this.valueHotdog.Name = "valueHotdog";
             this.valueHotdog.Size = new System.Drawing.Size(69, 23);
             this.valueHotdog.TabIndex = 5;
+            this.valueHotdog.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valueHotdog.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valueHotdog_KeyPress);
             // 
             // valueCofe
             // 
@@ -302,6 +306,8 @@
             this.valueCofe.Name = "valueCofe";
             this.valueCofe.Size = new System.Drawing.Size(69, 23);
             this.valueCofe.TabIndex = 6;
+            this.valueCofe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valueCofe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valueCofe_KeyPress);
             // 
             // valueTea
             // 
@@ -311,6 +317,8 @@
             this.valueTea.Name = "valueTea";
             this.valueTea.Size = new System.Drawing.Size(69, 23);
             this.valueTea.TabIndex = 7;
+            this.valueTea.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valueTea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valueTea_KeyPress);
             // 
             // checkBox4
             // 
