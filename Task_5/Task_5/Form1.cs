@@ -88,5 +88,37 @@
             }
             labelPayFuel.Text = sum_fuel.ToString();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+                valueBurger.Enabled= true;
+            else
+                valueBurger.Enabled = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+                valueHotdog.Enabled = true;
+            else
+                valueHotdog.Enabled = false;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+                valueCofe.Enabled = true;
+            else
+                valueCofe.Enabled = false;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+                valueTea.Enabled = true;
+            else
+                valueTea.Enabled = false;
+        }
     }
 }
