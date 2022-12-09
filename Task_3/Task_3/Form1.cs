@@ -1,4 +1,4 @@
-namespace Task_3
+п»їnamespace Task_3
 {
     public partial class Form1 : Form
     {
@@ -6,16 +6,16 @@ namespace Task_3
         {
             InitializeComponent();
         }
-
+// Р·Р°РїСѓСЃРє РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ С‚СЂРµС… РѕРєРѕРЅ РїСЂРё Р·Р°РїСѓСЃРєРµ С„РѕСЂРјС‹
         private void Form1_Load(object sender, EventArgs e)
         {
-            string message1 = "Меня зовут Алексей. Мне 32 года.";
-            string message2 = "Я учусь в академии ТОП на курсе \"Разработка программного обеспечения.\"";
-            string message3 = "Уже прошли курс С#, а сейчас начали изучать WinForms, а далее будет WPF.";
+            string message1 = "РњРµРЅСЏ Р·РѕРІСѓС‚ РђР»РµРєСЃРµР№. РњРЅРµ 32 РіРѕРґР°.";
+            string message2 = "РЇ СѓС‡СѓСЃСЊ РІ Р°РєР°РґРµРјРёРё РўРћРџ РЅР° РєСѓСЂСЃРµ \"Р Р°Р·СЂР°Р±РѕС‚РєР° РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ РѕР±РµСЃРїРµС‡РµРЅРёСЏ.\"";
+            string message3 = "РЈР¶Рµ РїСЂРѕС€Р»Рё РєСѓСЂСЃ РЎ#, Р° СЃРµР№С‡Р°СЃ РЅР°С‡Р°Р»Рё РёР·СѓС‡Р°С‚СЊ WinForms, Р° РґР°Р»РµРµ Р±СѓРґРµС‚ WPF.";
             int average = (message1.Length + message2.Length + message3.Length) / 3;
-            MessageBox.Show(message1, "Сообщение 1", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show(message2, "Сообщение 2", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show(message3, $"Среднее {average}", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message1, "РЎРѕРѕР±С‰РµРЅРёРµ 1", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message2, "РЎРѕРѕР±С‰РµРЅРёРµ 2", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message3, $"РЎСЂРµРґРЅРµРµ {average}", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

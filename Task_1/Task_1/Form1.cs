@@ -1,4 +1,4 @@
-namespace Task_1
+﻿namespace Task_1
 {
     public partial class Form1 : Form
     {
@@ -11,21 +11,21 @@ namespace Task_1
         {
 
         }
-
+// обработчик нажатия кнопки "Привет"
         private void button1_Click(object sender, EventArgs e)
         {
             string name;
 
             if (textBox1.Text != "")
             {
-                name = "������ " + textBox1.Text;
+                name = "Привет " + textBox1.Text;
             }
             else
             {
-                name = "�� �� ������ ���";
+                name = "Вы не задали имя";
             }
 
-            MessageBox.Show(name, "�����������");
+            MessageBox.Show(name, "Приветствие");
         }
     }
 }
