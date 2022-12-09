@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.progressBarLoad = new System.Windows.Forms.ProgressBar();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tipLoad = new System.Windows.Forms.ToolTip(this.components);
+            this.tipOpen = new System.Windows.Forms.ToolTip(this.components);
+            this.tipBar = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // progressBarLoad
@@ -40,6 +44,7 @@
             this.progressBarLoad.Name = "progressBarLoad";
             this.progressBarLoad.Size = new System.Drawing.Size(312, 35);
             this.progressBarLoad.TabIndex = 0;
+            this.tipBar.SetToolTip(this.progressBarLoad, "Шкала прогресса загрузки файла ");
             // 
             // buttonLoad
             // 
@@ -48,6 +53,7 @@
             this.buttonLoad.Size = new System.Drawing.Size(312, 58);
             this.buttonLoad.TabIndex = 1;
             this.buttonLoad.Text = "Загрузить файл";
+            this.tipLoad.SetToolTip(this.buttonLoad, "Нажмите, чтобы загрузить файл в программу");
             this.buttonLoad.UseVisualStyleBackColor = true;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
@@ -59,6 +65,7 @@
             this.buttonOpen.Size = new System.Drawing.Size(312, 58);
             this.buttonOpen.TabIndex = 1;
             this.buttonOpen.Text = "Открыть файл";
+            this.tipOpen.SetToolTip(this.buttonOpen, "Открывает текст в новом окне");
             this.buttonOpen.UseVisualStyleBackColor = true;
             this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
@@ -87,5 +94,8 @@
         private Button buttonLoad;
         private Button buttonOpen;
         private OpenFileDialog openFileDialog1;
+        private ToolTip tipLoad;
+        private ToolTip tipOpen;
+        private ToolTip tipBar;
     }
 }
