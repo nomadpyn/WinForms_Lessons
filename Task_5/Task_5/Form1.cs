@@ -9,7 +9,8 @@
         public Form1()
         {
             InitializeComponent();
-            comboBoxFuel.Items.AddRange(new string[] { "Бензин АИ92", "Бензин АИ95", "Дизель" });
+            comboBoxFuel.Items.AddRange(new string[] { "Бензин АИ92", "Бензин АИ95", "Дизель"});
+            comboBoxFuel.SelectedIndex = -1;
             fuelValueBox.TextChanged += MaskedTextBox1_TextChanged;
             valueBurger.TextChanged += valueBurger_TextChanged;
             valueHotdog.TextChanged += valueHotdog_TextChanged;
@@ -17,9 +18,6 @@
             valueTea.TextChanged += valueTea_TextChanged;
             labelPayFuel.TextChanged += labelPayTotal_TextChanged;
             labelPayCafe.TextChanged += labelPayTotal_TextChanged;
-
-
-
         }
         private void labelPayTotal_TextChanged(object? sender, EventArgs e)
         {
@@ -92,9 +90,9 @@
         }
         private void payButton_Click(object sender, EventArgs e)
         {
-            Thread.Sleep(1000);
             MessageBox.Show(string.Format("{0:F} оплачено успешно!", this.sum_cafe.Sum() + this.sum_fuel));
-
+            Thread.Sleep(1000);
+            clearAll();
         }    
         private void getFuelSum(string text, double price)
         {
@@ -169,6 +167,22 @@
                 sum_cafe[index] = 0;
                 textbox.Clear();
             }
+        }
+        private void clearAll()
+        {
+            comboBoxFuel.SelectedIndex = -1;
+            this.sum_fuel = 0;
+            textBoxFuelPrice.Clear();
+            fuelValueBox.Clear();
+            Array.Clear(this.sum_cafe);
+            checkBoxBurger.Checked = false;
+            checkBoxHotdog.Checked = false;
+            checkBoxCofe.Checked = false;
+            checkBoxTea.Checked = false;
+            comboBoxFuel.Refresh();
+            labelPayFuel.ResetText();
+            labelPayCafe.ResetText();
+            labelPayTotal.ResetText();
         }
     }
 }
