@@ -41,6 +41,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(358, 259);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
             // 
             // form2
             // 
@@ -51,7 +52,6 @@
             this.Name = "form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form2";
-            this.Load += new System.EventHandler(this.form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

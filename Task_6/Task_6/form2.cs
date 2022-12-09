@@ -17,10 +17,5 @@ namespace Task_6
             InitializeComponent();
             textBox1.Text = data;
         }
-
-        private void form2_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
