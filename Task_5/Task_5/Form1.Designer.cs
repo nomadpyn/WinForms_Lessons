@@ -50,10 +50,10 @@
             this.valueHotdog = new System.Windows.Forms.TextBox();
             this.valueCofe = new System.Windows.Forms.TextBox();
             this.valueTea = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxTea = new System.Windows.Forms.CheckBox();
+            this.checkBoxCofe = new System.Windows.Forms.CheckBox();
+            this.checkBoxHotdog = new System.Windows.Forms.CheckBox();
+            this.checkBoxBurger = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelPayCafe = new System.Windows.Forms.Label();
@@ -197,10 +197,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.checkBoxTea);
+            this.groupBox2.Controls.Add(this.checkBoxCofe);
+            this.groupBox2.Controls.Add(this.checkBoxHotdog);
+            this.groupBox2.Controls.Add(this.checkBoxBurger);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Location = new System.Drawing.Point(12, 169);
             this.groupBox2.Name = "groupBox2";
@@ -320,53 +320,53 @@
             this.valueTea.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.valueTea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valueTea_KeyPress);
             // 
-            // checkBox4
+            // checkBoxTea
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(14, 108);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(50, 21);
-            this.checkBox4.TabIndex = 9;
-            this.checkBox4.Text = "Чай";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBoxTea.AutoSize = true;
+            this.checkBoxTea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxTea.Location = new System.Drawing.Point(14, 108);
+            this.checkBoxTea.Name = "checkBoxTea";
+            this.checkBoxTea.Size = new System.Drawing.Size(50, 21);
+            this.checkBoxTea.TabIndex = 9;
+            this.checkBoxTea.Text = "Чай";
+            this.checkBoxTea.UseVisualStyleBackColor = true;
+            this.checkBoxTea.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxCofe
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(13, 80);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(59, 21);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.Text = "Кофе";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.checkBoxCofe.AutoSize = true;
+            this.checkBoxCofe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxCofe.Location = new System.Drawing.Point(13, 80);
+            this.checkBoxCofe.Name = "checkBoxCofe";
+            this.checkBoxCofe.Size = new System.Drawing.Size(59, 21);
+            this.checkBoxCofe.TabIndex = 8;
+            this.checkBoxCofe.Text = "Кофе";
+            this.checkBoxCofe.UseVisualStyleBackColor = true;
+            this.checkBoxCofe.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxHotdog
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(13, 53);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(75, 21);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Хот-Дог";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBoxHotdog.AutoSize = true;
+            this.checkBoxHotdog.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxHotdog.Location = new System.Drawing.Point(13, 53);
+            this.checkBoxHotdog.Name = "checkBoxHotdog";
+            this.checkBoxHotdog.Size = new System.Drawing.Size(75, 21);
+            this.checkBoxHotdog.TabIndex = 7;
+            this.checkBoxHotdog.Text = "Хот-Дог";
+            this.checkBoxHotdog.UseVisualStyleBackColor = true;
+            this.checkBoxHotdog.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox1
+            // checkBoxBurger
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(13, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 21);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Бургер";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxBurger.AutoSize = true;
+            this.checkBoxBurger.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBurger.Location = new System.Drawing.Point(13, 27);
+            this.checkBoxBurger.Name = "checkBoxBurger";
+            this.checkBoxBurger.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxBurger.TabIndex = 6;
+            this.checkBoxBurger.Text = "Бургер";
+            this.checkBoxBurger.UseVisualStyleBackColor = true;
+            this.checkBoxBurger.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox5
             // 
@@ -500,10 +500,10 @@
         private Label label9;
         private Label labelPayTotal;
         private Button payButton;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxTea;
+        private CheckBox checkBoxCofe;
+        private CheckBox checkBoxHotdog;
+        private CheckBox checkBoxBurger;
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox priceBurger;
         private TextBox priceHotdog;

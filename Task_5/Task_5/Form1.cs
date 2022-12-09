@@ -76,27 +76,19 @@
         }
         private void valueBurger_TextChanged(object? sender, EventArgs e)
         {
-            double sum = Convert.ToDouble(valueBurger.Text) * food_price[0];
-            sum_cafe[0] += sum;
-            labelPayCafe.Text = sum_cafe.Sum().ToString();
+            getCafeSum(valueBurger.Text, 0);            
         }
         private void valueHotdog_TextChanged(object? sender, EventArgs e)
         {
-            double sum = Convert.ToDouble(valueHotdog.Text) * food_price[1];
-            sum_cafe[1] += sum;
-            labelPayCafe.Text = sum_cafe.Sum().ToString();
+            getCafeSum(valueHotdog.Text, 1);
         }
         private void valueCofe_TextChanged(object? sender, EventArgs e)
         {
-            double sum = Convert.ToDouble(valueCofe.Text) * food_price[2];
-            sum_cafe[2] += sum;
-            labelPayCafe.Text = sum_cafe.Sum().ToString();
+            getCafeSum(valueCofe.Text, 2);
         }
         private void valueTea_TextChanged(object? sender, EventArgs e)
         {
-            double sum = Convert.ToDouble(valueTea.Text) * food_price[3];
-            sum_cafe[3] += sum;
-            labelPayCafe.Text = sum_cafe.Sum().ToString();
+            getCafeSum(valueTea.Text, 3);
         }
         private void payButton_Click(object sender, EventArgs e)
         {
@@ -117,33 +109,35 @@
             }
             labelPayFuel.Text = sum_fuel.ToString();
         }
+        private void getCafeSum(string text, int index)
+        {
+            if (text != "")
+            {
+                double sum = Convert.ToDouble(text) * food_price[index];
+                sum_cafe[index] = sum;
+            }
+            else
+            {
+                sum_cafe[index] = 0;
+            }
+            labelPayCafe.Text = sum_cafe.Sum().ToString();
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
-                valueBurger.Enabled= true;
-            else
-                valueBurger.Enabled = false;
+            checkBoxLogic(checkBoxBurger, valueBurger, 0);
+            
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
-                valueHotdog.Enabled = true;
-            else
-                valueHotdog.Enabled = false;
+            checkBoxLogic(checkBoxHotdog, valueHotdog, 1);
         }
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked == true)
-                valueCofe.Enabled = true;
-            else
-                valueCofe.Enabled = false;
+            checkBoxLogic(checkBoxCofe, valueCofe, 2);
         }
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked == true)
-                valueTea.Enabled = true;
-            else
-                valueTea.Enabled = false;
+            checkBoxLogic(checkBoxTea, valueTea, 3);
         }
         private void valueBurger_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -164,6 +158,17 @@
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
                 e.Handled = true;
+        }
+        private void checkBoxLogic(CheckBox checkbox, TextBox textbox, int index)
+        {
+            if (checkbox.Checked == true)
+                textbox.Enabled = true;
+            else
+            {
+                textbox.Enabled = false;
+                sum_cafe[index] = 0;
+                textbox.Clear();
+            }
         }
     }
 }
