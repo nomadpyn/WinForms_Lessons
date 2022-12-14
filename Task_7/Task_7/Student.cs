@@ -12,6 +12,7 @@ namespace Task_7
         public string? Fname { get; set; }
         public DateOnly BirthDay { get; set; }
         public string? Group { get; set; }
+        public Student() { }
         public Student(string? name, string? fname, DateOnly birthDay, string? group)
         {
             this.Name = name;

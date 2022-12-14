@@ -45,6 +45,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // labelName
             // 
@@ -61,6 +62,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(200, 23);
             this.textBoxName.TabIndex = 2;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelFname
             // 
@@ -77,17 +79,17 @@
             this.textBoxFname.Name = "textBoxFname";
             this.textBoxFname.Size = new System.Drawing.Size(200, 23);
             this.textBoxFname.TabIndex = 4;
-            this.textBoxFname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxFname.TextChanged += new System.EventHandler(this.textBoxFname_TextChanged);
             // 
             // buttonAddToList
             // 
-            this.buttonAddToList.Enabled = false;
             this.buttonAddToList.Location = new System.Drawing.Point(12, 241);
             this.buttonAddToList.Name = "buttonAddToList";
             this.buttonAddToList.Size = new System.Drawing.Size(200, 50);
             this.buttonAddToList.TabIndex = 5;
             this.buttonAddToList.Text = "Добавить";
             this.buttonAddToList.UseVisualStyleBackColor = true;
+            this.buttonAddToList.Click += new System.EventHandler(this.buttonAddToList_Click);
             // 
             // comboBoxGroup
             // 
@@ -96,6 +98,7 @@
             this.comboBoxGroup.Name = "comboBoxGroup";
             this.comboBoxGroup.Size = new System.Drawing.Size(200, 23);
             this.comboBoxGroup.TabIndex = 6;
+            this.comboBoxGroup.SelectedIndexChanged += new System.EventHandler(this.comboBoxGroup_SelectedIndexChanged);
             // 
             // labelGroup
             // 
