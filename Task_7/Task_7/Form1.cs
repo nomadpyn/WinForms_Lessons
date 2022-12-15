@@ -11,6 +11,7 @@ namespace Task_7
         private void Form1_Load(object sender, EventArgs e)
         {
             listBoxStudents.MouseDoubleClick += ListBoxStudents_MouseDoubleClick;
+            
         }
 
         private void ListBoxStudents_MouseDoubleClick(object? sender, MouseEventArgs e)
@@ -24,7 +25,12 @@ namespace Task_7
             if (AddForm.ShowDialog() == DialogResult.OK)
             {
                 listBoxStudents.Items.Add(AddForm.ST);
-            }   
+            }
+            if (listBoxStudents.Items.Count > 0)
+            {
+                buttonSave.Enabled = true;
+                buttonLoad.Enabled = false;
+            }
         }
     }
 }

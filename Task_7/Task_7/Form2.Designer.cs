@@ -83,6 +83,7 @@
             // 
             // buttonAddToList
             // 
+            this.buttonAddToList.Enabled = false;
             this.buttonAddToList.Location = new System.Drawing.Point(12, 241);
             this.buttonAddToList.Name = "buttonAddToList";
             this.buttonAddToList.Size = new System.Drawing.Size(200, 50);

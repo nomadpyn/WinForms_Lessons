@@ -41,6 +41,8 @@ namespace Task_7
             int month = dateTimePicker1.Value.Month;
             int year = dateTimePicker1.Value.Year;
             this.ST.BirthDay = new DateOnly(year, month, day);
+            if (ST.Name != null && ST.Fname != null && ST.Group != null)
+                buttonAddToList.Enabled = true;
         }
 
         private void buttonAddToList_Click(object sender, EventArgs e)
