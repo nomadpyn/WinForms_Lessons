@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Task_7
 {
@@ -10,10 +12,10 @@ namespace Task_7
     {
         public string? Name { get; set; }
         public string? Fname { get; set; }
-        public DateOnly BirthDay { get; set; }
+        public DateTime BirthDay { get; set; }
         public string? Group { get; set; }
         public Student() { }
-        public Student(string? name, string? fname, DateOnly birthDay, string? group)
+        public Student(string? name, string? fname, DateTime birthDay, string? group)
         {
             this.Name = name;
             this.Fname = fname;
@@ -22,7 +24,9 @@ namespace Task_7
         }
         public override string ToString()
         {
-            return $"{this.Fname} {this.Name}. Дата рождения {this.BirthDay}. Группа {this.Group}."; 
+            return $"{this.Fname} {this.Name}. " +
+                $"Дата рождения {this.BirthDay.Day}.{this.BirthDay.Month}.{this.BirthDay.Year}." +
+                $" Группа {this.Group}."; 
         }
     }
 }

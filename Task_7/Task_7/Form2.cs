@@ -37,10 +37,10 @@ namespace Task_7
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            int day = dateTimePicker1.Value.Day;
-            int month = dateTimePicker1.Value.Month;
-            int year = dateTimePicker1.Value.Year;
-            this.ST.BirthDay = new DateOnly(year, month, day);
+            //int day = dateTimePicker1.Value.Day;
+            //int month = dateTimePicker1.Value.Month;
+            //int year = dateTimePicker1.Value.Year;
+            this.ST.BirthDay = dateTimePicker1.Value;
             if (ST.Name != null && ST.Fname != null && ST.Group != null)
                 buttonAddToList.Enabled = true;
         }

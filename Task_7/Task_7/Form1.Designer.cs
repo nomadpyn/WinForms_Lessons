@@ -33,6 +33,8 @@
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // listBoxStudents
@@ -61,6 +63,7 @@
             this.buttonLoad.TabIndex = 2;
             this.buttonLoad.Text = "Загрузить из файла";
             this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // buttonSave
             // 
@@ -71,6 +74,7 @@
             this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Сохранить в файл";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonAdd
             // 
@@ -81,6 +85,14 @@
             this.buttonAdd.Text = "Добавить студента";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // sfd
+            // 
+            this.sfd.FileName = "sfd";
+            // 
+            // ofd
+            // 
+            this.ofd.FileName = "ofd";
             // 
             // Form1
             // 
@@ -107,5 +119,7 @@
         private Button buttonLoad;
         private Button buttonSave;
         private Button buttonAdd;
+        private SaveFileDialog sfd;
+        private OpenFileDialog ofd;
     }
 }
