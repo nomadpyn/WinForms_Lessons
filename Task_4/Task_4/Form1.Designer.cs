@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxResult = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,15 +49,15 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // textBoxResult
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 22);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox1.Size = new System.Drawing.Size(232, 35);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.textBoxResult.Location = new System.Drawing.Point(12, 22);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
+            this.textBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxResult.Size = new System.Drawing.Size(232, 35);
+            this.textBoxResult.TabIndex = 1;
+            this.textBoxResult.Text = "";
             // 
             // tableLayoutPanel1
             // 
@@ -274,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(256, 360);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBoxResult);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -284,7 +284,7 @@
 
         #endregion
 
-        private RichTextBox richTextBox1;
+        private RichTextBox textBoxResult;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
         private Button button2;
