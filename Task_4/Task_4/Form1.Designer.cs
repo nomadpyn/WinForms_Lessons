@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxResult = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,18 +45,9 @@
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonMult = new System.Windows.Forms.Button();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Location = new System.Drawing.Point(12, 22);
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ReadOnly = true;
-            this.textBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxResult.Size = new System.Drawing.Size(232, 35);
-            this.textBoxResult.TabIndex = 1;
-            this.textBoxResult.Text = "";
             // 
             // tableLayoutPanel1
             // 
@@ -82,7 +72,7 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonMinus, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonDel, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonMult, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 115);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 82);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -268,23 +258,36 @@
             this.buttonMult.UseVisualStyleBackColor = true;
             this.buttonMult.Click += new System.EventHandler(this.buttonMult_Click);
             // 
+            // textBoxResult
+            // 
+            this.textBoxResult.AcceptsReturn = true;
+            this.textBoxResult.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxResult.Location = new System.Drawing.Point(12, 29);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.Size = new System.Drawing.Size(232, 27);
+            this.textBoxResult.TabIndex = 3;
+            this.textBoxResult.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxResult_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 360);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(254, 277);
             this.Controls.Add(this.textBoxResult);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private RichTextBox textBoxResult;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
         private Button button2;
@@ -302,5 +305,6 @@
         private Button buttonMinus;
         private Button buttonDel;
         private Button buttonMult;
+        private TextBox textBoxResult;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Windows.Forms;
 
 namespace Task_4
 {
@@ -6,7 +7,7 @@ namespace Task_4
     {      
         public Form1()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 // добавление цифры от 1 до 9 в строку по нажатию на кнопку        
         private void button1_Click(object sender, EventArgs e)
@@ -100,6 +101,15 @@ namespace Task_4
                 return true;
             else
                 return false;
+        }
+// вычисление выражения по нажатию клавиши Enter
+        private void textBoxResult_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonEnter_Click(sender, e);
+            }
+            textBoxResult.SelectionStart = textBoxResult.TextLength;
         }
     }
 }
